@@ -1,0 +1,6 @@
+apiVersion: v2
+name: efs-pv
+description: Helm chart for EFS PersistentVolume and PersistentVolumeClaim
+type: application
+version: 0.1.0
+appVersion: "1.0"
