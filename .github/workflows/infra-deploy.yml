@@ -19,9 +19,9 @@ jobs:
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
-        with: 
-         role-to-assume: arn:aws:iam::005023349971:role/GitHubActionsRole
-         aws-region: us-east-1
+        with:
+          role-to-assume: arn:aws:iam::005023349971:role/GitHubActionsRole
+          aws-region: us-east-1
 
       - name: Terraform Init
         run: terraform -chdir=terraform init
