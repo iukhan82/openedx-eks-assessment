@@ -2,7 +2,7 @@ provider "aws" {
   region = var.region
 }
 
-# Get cluster auth token automatically
+# Get cluster auth token automatically from
 data "aws_eks_cluster_auth" "cluster" {
   name = module.eks.cluster_name
 }
