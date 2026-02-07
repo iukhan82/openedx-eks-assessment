@@ -17,12 +17,12 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
-     - name: Configure AWS credentials
-       uses: aws-actions/configure-aws-credentials@v4 
-       with: 
-         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-         aws-region: ${{ secrets.AWS_REGION }}
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with: 
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
         run: terraform -chdir=terraform init
@@ -32,3 +32,4 @@ jobs:
 
       - name: Terraform Apply
         run: terraform -chdir=terraform apply -auto-approve
+
