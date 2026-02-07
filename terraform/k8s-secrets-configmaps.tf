@@ -10,7 +10,7 @@ resource "kubernetes_secret" "lms_db_secret" {
   }
 }
 
-# ConfigMap for LMS service endpoints
+# ConfigMap for LMS service endpointss
 resource "kubernetes_config_map" "lms_config" {
   metadata {
     name      = "lms-config"
